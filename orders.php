@@ -48,7 +48,7 @@ if(!isset($user_id)){
             while($fetch_orders = mysqli_fetch_assoc($order_query)){
       ?>
       <div class="box">
-         <p> placed on : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
+         <p> Placed On : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
          <p> name : <span><?php echo $fetch_orders['name']; ?></span> </p>
          <p> number : <span><?php echo $fetch_orders['number']; ?></span> </p>
          <p> email : <span><?php echo $fetch_orders['email']; ?></span> </p>
