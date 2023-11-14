@@ -1,0 +1,11 @@
+<?php
+session_start();
+$servername = "localhost";
+$server_user = "root";
+$server_pass = "Dhruvil_98";
+$dbname = "shop_db";
+
+//$conn = new mysqli($servername, $server_user, $server_pass, $dbname);
+$conn = mysqli_connect($servername, $server_user, $server_pass, $dbname) or die('connection failed');
+
+?>
