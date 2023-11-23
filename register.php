@@ -13,13 +13,13 @@ if(isset($_POST['submit'])){
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
    if(mysqli_num_rows($select_users) > 0){
-      $message[] = 'user already exist!';
+      $message[] = 'User Already Exists!';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm password not matched!';
+         $message[] = 'Confirm Password Does Not Match!';
       }else{
          mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass', '$user_type')") or die('query failed');
-         $message[] = 'registered successfully!';
+         $message[] = 'User Registered Successfully!';
          header('location:login.php');
       }
    }
@@ -73,7 +73,7 @@ if(isset($message)){
          <option value="admin">Admin</option>
       </select>
       <input type="submit" name="submit" value="register now" class="btn" style="background-color:#9C6644;">
-      <p>Already have an account? <a href="login.php" style="color:#9C6644;">Login now</a></p>
+      <p>Already have an account? <a href="login.php" style="color:#9C6644;">Login Now</a></p>
    </form>
 
 </div>
