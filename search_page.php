@@ -56,7 +56,7 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="search-form">
    <form action="" method="post">
-      <input type="text" name="search" placeholder="search products..." class="box">
+      <input type="text" name="search" placeholder="Search Products..." class="box">
       <input type="submit" name="submit" value="search" class="btn">
    </form>
 </section>
@@ -79,15 +79,15 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
       <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
-      <input type="submit" class="btn" value="add to cart" name="add_to_cart">
+      <input type="submit" class="btn" value="Add To Cart" name="add_to_cart">
    </form>
    <?php
             }
          }else{
-            echo '<p class="empty">no result found!</p>';
+            echo '<p class="empty">No Result Found!</p>';
          }
       }else{
-         echo '<p class="empty">search something!</p>';
+         echo '<p class="empty">Search Something!</p>';
       }
    ?>
    </div>
